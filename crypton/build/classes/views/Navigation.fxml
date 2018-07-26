@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="navPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.NavigationController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="289.0" minHeight="10.0" prefHeight="276.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="175.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="302.0" minHeight="10.0" prefHeight="208.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="account_id" text="$labelText" visible="false" />
+      <ImageView fx:id="uploadImg" fitHeight="500.0" fitWidth="400.0" onMouseClicked="#uploadImgPress" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../resource/upload.jpg" />
+         </image>
+      </ImageView>
+      <ToolBar prefHeight="50.0" prefWidth="800.0" GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
+         <items>
+            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutBtnPress" text="Log out" />
+         </items>
+      </ToolBar>
+      <ImageView fx:id="libraryImg" fitHeight="500.0" fitWidth="400.0" onMouseClicked="#libraryImgPress" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../resource/ulibrary.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Upload" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Library" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upload your files" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Encrypt/Decrypt your files" textAlignment="CENTER" wrappingWidth="136.822265625" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+   </children>
+</GridPane>
